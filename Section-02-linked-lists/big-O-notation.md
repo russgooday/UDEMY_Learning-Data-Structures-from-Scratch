@@ -37,7 +37,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
 <img
   src='../images/linear-runtime.png'
   alt='linear runtime graph'
-  style='width: 33%; height: auto; margin: 2rem 0;'
+  width='500'
 />
 
 ### Notation: 'O (n^2)'
