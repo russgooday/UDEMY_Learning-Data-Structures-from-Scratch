@@ -4,7 +4,7 @@
 
 Regardless of input the following function will only ever return 2 indexes. The time will therefore be constant.
 
-```
+```js
 // Constant Runtime
 // Big O Notation: 'O (1)'
 function log(array) {
@@ -24,7 +24,7 @@ function log(array) {
 
 Runtime of the following function increases proportionally to our given input.
 
-```
+```js
 // Linear Runtime
 // Big O Notation: 'O (n)'
 function logAll(input) {
@@ -48,7 +48,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
 
 The nested loop in the following function increases it's runtime exponentially according to the given input.
 
-```
+```js
 // Exponential Runtime
 // Big O Notation: 'O (n^2)'
 function concatAndLog (input) {
@@ -107,7 +107,7 @@ The middle character is '**P**' and we have our match — A total of 3 steps.
 
 A numeric binary search code example
 
-```
+```js
 // Logarithmic Runtime
 // Big O Notation: 'O (log n)'
 function binarySearch (array, key) {
