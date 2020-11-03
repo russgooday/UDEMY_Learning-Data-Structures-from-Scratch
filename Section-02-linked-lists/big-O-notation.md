@@ -22,7 +22,7 @@ function log(array) {
 
 ### Notation: 'O (n)'
 
-Runtime of the following function increases proportionally to our given input.
+With a sinle loop the runtime of the following function increases proportionally to our given input.
 
 ```js
 // Linear Runtime
