@@ -91,11 +91,11 @@ Starting with 26 characters we first find the middle character
 
 **ABCDEFGHIJKL M NOPQRSTUVWXYZ**
 
-The middle character is '**M**' and '**P**' is higher up the alphabet, so we throw away the lower letters and search through the remaining characters
+The middle character is '**M**' and because '**P**' is higher up the alphabet we disregard the lower letters and search through the upper half of the alphabet.
 
 **NOPQRS T UVWXYZ**
 
-The middle character is '**T**' and this time '**P**' is lower in the alphabet. We now throw away the higher letters and search through the next remaining characters
+The middle character is '**T**' and this time '**P**' is lower in the alphabet. We now disregard the higher letters and search through the next remaining characters
 
 **NO P QRS**
 
