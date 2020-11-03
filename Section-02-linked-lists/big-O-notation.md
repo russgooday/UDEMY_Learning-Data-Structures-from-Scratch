@@ -37,7 +37,7 @@ function logAll(input) {
 logAll([1, 2, 3])
 logAll([1, 2, 3, 4, 5, 6]) // double the time
 ```
-
+<br>
 <img
   src='../images/linear-runtime.png'
   alt='linear runtime graph'
