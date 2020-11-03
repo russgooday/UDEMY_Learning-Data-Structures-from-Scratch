@@ -15,7 +15,7 @@ function log(array) {
 <img
   src='../images/constant-runtime.png'
   alt='constant runtime graph'
-  style='width: 33%; height: auto; margin: 2rem 0;'
+  width='400'
 />
 
 ### Notation: 'O (n)'
@@ -37,7 +37,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
 <img
   src='../images/linear-runtime.png'
   alt='linear runtime graph'
-  width='500'
+  width='400'
 />
 
 ### Notation: 'O (n^2)'
@@ -68,7 +68,7 @@ concatAndLog(['A','B','C','D','E'])
 <img
   src='../images/exponential-runtime.png'
   alt='exponential runtime graph'
-  style='width: 33%; height: auto; margin: 2rem 0;'
+  width='400'
 />
 
 ### Notation: 'O (log n)'
@@ -140,5 +140,5 @@ binarySearch(
 <img
   src='../images/logarithmic-runtime.png'
   alt='logarithmic runtime graph'
-  style='width: 33%; height: auto; margin: 2rem 0;'
+  width='400'
 />
