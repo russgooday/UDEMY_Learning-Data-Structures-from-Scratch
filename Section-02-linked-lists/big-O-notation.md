@@ -12,6 +12,7 @@ function log(array) {
   console.log(array[1])
 }
 ```
+
 <img
   src='../images/constant-runtime.png'
   alt='constant runtime graph'
@@ -36,6 +37,7 @@ function logAll(input) {
 logAll([1, 2, 3])
 logAll([1, 2, 3, 4, 5, 6]) // double the time
 ```
+
 <img
   src='../images/linear-runtime.png'
   alt='linear runtime graph'
@@ -69,6 +71,7 @@ concatAndLog(['A','B','C','D','E'])
 // 25 pairs logged
 // AA AB AC AD AE BA ... ED EE
 ```
+
 <img
   src='../images/exponential-runtime.png'
   alt='exponential runtime graph'
@@ -143,6 +146,7 @@ binarySearch(
 // step3: 13
 
 ```
+
 <img
   src='../images/logarithmic-runtime.png'
   alt='logarithmic runtime graph'
