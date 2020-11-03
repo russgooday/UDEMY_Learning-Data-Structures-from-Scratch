@@ -63,7 +63,7 @@ function concatAndLog (input) {
 
 concatAndLog(['A','B','C'])
 // 9 pairs logged
-// AA AB AC BA ... CB CC
+// AA AB AC BA BB BC CA CB CC
 
 concatAndLog(['A','B','C','D','E'])
 // 25 pairs logged
