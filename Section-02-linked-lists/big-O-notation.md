@@ -124,7 +124,7 @@ function binarySearch (array, key) {
     } else if (element > key) {
       high = mid - 1
     } else {
-      return `index ${mid} steps ${steps}`
+      return `index ${mid}`
     }
   }
 
