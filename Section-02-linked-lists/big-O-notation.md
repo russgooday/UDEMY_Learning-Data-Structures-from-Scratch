@@ -12,13 +12,12 @@ function log(array) {
   console.log(array[1])
 }
 ```
-
+<br>
 <img
   src='../images/constant-runtime.png'
   alt='constant runtime graph'
   width='300'
 />
-
 <br><br>
 
 ### Notation: 'O (n)'
