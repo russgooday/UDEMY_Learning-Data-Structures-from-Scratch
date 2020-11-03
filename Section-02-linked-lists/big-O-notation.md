@@ -18,6 +18,7 @@ function log(array) {
   width='300'
 />
 
+
 ### Notation: 'O (n)'
 
 Runtime of the following function increases proportionally to our given input.
@@ -39,6 +40,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
   alt='linear runtime graph'
   width='300'
 />
+
 
 ### Notation: 'O (n^2)'
 
@@ -70,6 +72,7 @@ concatAndLog(['A','B','C','D','E'])
   alt='exponential runtime graph'
   width='300'
 />
+
 
 ### Notation: 'O (log n)'
 
