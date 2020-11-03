@@ -89,19 +89,19 @@ A *more* perfomant solution would be a binary search, which works by halving the
 
 With a binary search, we would start with our 26 characters and look for the middle character
 
-**ABCDEFGHIJKL<font color='red'>M</font>NOPQRSTUVWXYZ**
+ABCDEFGHIJKL**M**NOPQRSTUVWXYZ
 
 The middle character is '**M**' and '**P**' is higher up the alphabet
 
 We throw away the lower letters and search through the remaining characters
 
-**NOPQRS<span style='color: teal; text-decoration: underline'>T</span>UVWXYZ**
+NOPQRS**T**UVWXYZ
 
 The middle character is '**T**' and this time '**P**' is lower in the alphabet
 
 We now throw away the higher letters and search through the remaining characters
 
-**NO<span style='color: red; text-decoration: underline'>P</span>QRS**
+NO**P**QRS
 
 The middle character is '**P**' and we have our match — A total of 3 steps.
 
