@@ -2,7 +2,7 @@
 
 ### Notation: 'O (1)'
 
-Regardless of input the following function will only ever return 2 indexes. The time will therefore be constant.
+Regardless of the array argument's size the following function will only ever return 2 indexes. The time will therefore be constant.
 
 ```js
 // Constant Runtime
