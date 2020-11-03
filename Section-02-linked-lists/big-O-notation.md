@@ -85,7 +85,7 @@ An example of a logarithmic runtime is a binary search.
 
 If we were looking through the alphabet for the letter '**P**'. We could search ***sequentially*** from '**A**' to '**P**' a total of **16** steps.
 
-A *more* perfomant solution would be a binary search, which works by halving the input for each step.
+A *more* performant solution would be a binary search, which works by halving the input for each step.
 
 With a binary search, we start with our 26 characters and look for the middle character
 
