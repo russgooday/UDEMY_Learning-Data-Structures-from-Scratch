@@ -42,7 +42,6 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
   alt='linear runtime graph'
   width='300'
 />
-
 <br><br>
 
 ### Notation: 'O (n^2)'
@@ -70,13 +69,12 @@ concatAndLog(['A','B','C','D','E'])
 // 25 pairs logged
 // AA AB AC AD AE BA ... ED EE
 ```
-
+<br>
 <img
   src='../images/exponential-runtime.png'
   alt='exponential runtime graph'
   width='300'
 />
-
 <br><br>
 
 ### Notation: 'O (log n)'
@@ -145,7 +143,7 @@ binarySearch(
 // step3: 13
 
 ```
-
+<br>
 <img
   src='../images/logarithmic-runtime.png'
   alt='logarithmic runtime graph'
