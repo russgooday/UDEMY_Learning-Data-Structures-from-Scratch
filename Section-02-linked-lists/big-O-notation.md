@@ -81,7 +81,7 @@ concatAndLog(['A','B','C','D','E'])
 
 An example of a logarithmic runtime is a binary search.
 
-##### Alphabet search example:
+#### Alphabet search example:
 
 If we were looking through the alphabet for the letter '**P**'. We could search ***sequentially*** from '**A**' to '**P**' a total of **16** steps.
 
