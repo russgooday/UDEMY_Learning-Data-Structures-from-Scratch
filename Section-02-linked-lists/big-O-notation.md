@@ -46,7 +46,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
 
 ### Notation: 'O (n^2)'
 
-The nested loop in the following function increases it's runtime exponentially according to the given input.
+The following nested loop increases the function's runtime exponentially according to the given input.
 
 ```js
 // Exponential Runtime
