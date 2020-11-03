@@ -89,7 +89,7 @@ A *more* perfomant solution would be a binary search, which works by halving the
 
 With a binary search, we would start with our 26 characters and look for the middle character
 
-**ABCDEFGHIJKL<span style='color: teal; text-decoration: underline'>M</span>NOPQRSTUVWXYZ**
+**ABCDEFGHIJKL<font color='red'>M</font>NOPQRSTUVWXYZ**
 
 The middle character is '**M**' and '**P**' is higher up the alphabet
 
