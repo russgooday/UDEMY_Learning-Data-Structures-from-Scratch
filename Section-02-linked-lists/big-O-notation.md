@@ -18,7 +18,7 @@ function log(array) {
   width='300'
 />
 
----
+  
 ### Notation: 'O (n)'
 
 Runtime of the following function increases proportionally to our given input.
@@ -41,7 +41,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
   width='300'
 />
 
----
+  
 ### Notation: 'O (n^2)'
 
 The nested loop in the following function increases it's runtime exponentially according to the given input.
@@ -73,7 +73,7 @@ concatAndLog(['A','B','C','D','E'])
   width='300'
 />
 
----
+  
 ### Notation: 'O (log n)'
 
 An example of a logarithmic runtime is a binary search.
