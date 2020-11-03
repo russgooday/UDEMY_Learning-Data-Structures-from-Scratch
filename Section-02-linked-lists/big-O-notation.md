@@ -87,7 +87,7 @@ If we were looking through the alphabet for the letter '**P**'. We could search 
 
 A *more* performant solution would be a binary search, which works by halving the input for each step.
 
-With a binary search, we start with our 26 characters and look for the middle character
+Starting with 26 characters we first find the middle character
 
 **ABCDEFGHIJKL M NOPQRSTUVWXYZ**
 
