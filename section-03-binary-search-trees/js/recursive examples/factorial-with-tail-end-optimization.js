@@ -1,4 +1,6 @@
 // With tail-end optimization
+// Note: most common browsers are yet to implement
+// tail-end optimization
 
 const factorial = (n, result = 1) => {
   console.log(`n=${n}, result=${result}`)
