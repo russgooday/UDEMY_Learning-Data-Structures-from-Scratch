@@ -12,14 +12,14 @@ const factorial = n =>
 
 console.log(factorial(5)) // 120
 ```
-</br>
+<br>
 ### 1. Call stack during calling phase
 <img
   src='../../../images/factorial-stage-01.png'
   alt='factorial during calling stage'
   width='400'
 />
-</br>
+<br>
 ### 2. Call stack during return phase
 <img
   src='../../../images/factorial-stage-02.png'
