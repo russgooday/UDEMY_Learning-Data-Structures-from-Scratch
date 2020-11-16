@@ -12,7 +12,7 @@ const factorial = n =>
 
 console.log(factorial(5)) // 120
 ```
-
+<br></br>
 #### 1. Call stack during calling phase
 <img
   src='../../../images/factorial-stage-01.png'
