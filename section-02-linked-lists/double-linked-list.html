@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Linked Lists</title>
+</head>
+<body>
+  <h1>Double Linked Lists</h1>
+
+  <script type='module'>
+    import { LinkedList } from './js/double-linked-list.js'
+
+    const list = new LinkedList()
+
+    // appending
+    list.append(10)
+    list.append(20)
+    list.append(10)
+    list.append(30)
+    list.prepend(5)
+    list.insertAfter(list.indexOf(20), 15)
+
+    console.log('List contains', [...list])
+    // 5, 10, 20, 15, 10, 30
+
+    // indexOf
+    console.log('indexOf(20)', list.indexOf(20)) // 2
+    console.log('indexOf(50)', list.indexOf(50)) // -1
+
+    // find
+    console.log(
+      'Find first Node > 10',
+      list.find(value => value > 10)
+    ) // 20
+
+    console.log(
+      'Find index of Node > 20',
+      list.findIndex(value => value > 20)
+    ) // 5
+
+    // filter
+    console.log(
+      'Filter Nodes Values > 10',
+      list.filter(value => value > 10)
+    ) // [20, 15, 30]
+
+    console.log(
+      'Filter Nodes with Values equal to 10',
+      list.filterNodes(node => node.data === 10)
+    )
+    /*
+      [
+        0: {data: 10, next: {…}, prev: {…}}
+        1: {data: 10, next: {…}, prev: {…}}
+      ]
+    */
+
+    console.log(
+      'Indexes of Nodes with Values < 20',
+      list.filterIndex(value => value < 20)
+    ) // [0, 1, 3, 4]
+
+    console.log('removeTail()', list.removeTail()) // 30
+
+    console.log('List now contains', [...list])
+    // 5, 10, 20, 15, 10
+  </script>
+</body>
+</html>
