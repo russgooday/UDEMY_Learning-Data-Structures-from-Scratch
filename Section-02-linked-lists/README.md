@@ -2,7 +2,7 @@
 
 ### Notation: 'O (1)'
 
-Regardless of input the following function will only ever return 2 indexes. The time will therefore be constant.
+Regardless of the array argument's size the following function will only ever return 2 indexes. The time will therefore be constant.
 
 ```js
 // Constant Runtime
@@ -22,7 +22,7 @@ function log(array) {
 
 ### Notation: 'O (n)'
 
-Runtime of the following function increases proportionally to our given input.
+With a single loop the runtime of the following function increases proportionally to our given input.
 
 ```js
 // Linear Runtime
@@ -46,7 +46,7 @@ logAll([1, 2, 3, 4, 5, 6]) // double the time
 
 ### Notation: 'O (n^2)'
 
-The nested loop in the following function increases it's runtime exponentially according to the given input.
+The following nested loop increases the function's runtime exponentially according to the given input.
 
 ```js
 // Exponential Runtime
@@ -63,7 +63,7 @@ function concatAndLog (input) {
 
 concatAndLog(['A','B','C'])
 // 9 pairs logged
-// AA AB AC BA ... CB CC
+// AA AB AC BA BB BC CA CB CC
 
 concatAndLog(['A','B','C','D','E'])
 // 25 pairs logged
@@ -85,23 +85,19 @@ An example of a logarithmic runtime is a binary search.
 
 If we were looking through the alphabet for the letter '**P**'. We could search ***sequentially*** from '**A**' to '**P**' a total of **16** steps.
 
-A *more* perfomant solution would be a binary search, which works by halving the input for each step.
+A *more* performant solution would be a binary search, which works by halving the input for each step.
 
-With a binary search, we would start with our 26 characters and look for the middle character
+Starting with 26 characters we first find the middle character
 
-ABCDEFGHIJKL**M**NOPQRSTUVWXYZ
+**ABCDEFGHIJKL M NOPQRSTUVWXYZ**
 
-The middle character is '**M**' and '**P**' is higher up the alphabet
+The middle character is '**M**' and because '**P**' is higher up the alphabet we disregard the lower letters and search through the upper half of the alphabet.
 
-We throw away the lower letters and search through the remaining characters
+**NOPQRS T UVWXYZ**
 
-NOPQRS**T**UVWXYZ
+The middle character is '**T**' and this time '**P**' is lower in the alphabet. We now disregard the higher letters and search through the next remaining characters
 
-The middle character is '**T**' and this time '**P**' is lower in the alphabet
-
-We now throw away the higher letters and search through the remaining characters
-
-NO**P**QRS
+**NO P QRS**
 
 The middle character is '**P**' and we have our match — A total of 3 steps.
 
@@ -124,7 +120,7 @@ function binarySearch (array, key) {
     } else if (element > key) {
       high = mid - 1
     } else {
-      return `index ${mid} steps ${steps}`
+      return `index ${mid}`
     }
   }
 
