@@ -71,6 +71,15 @@ test(`breadthFirst equals ${BFTExp}`, () => {
   expect(BFTRes).toEqual(BFTExp)
 })
 
+// Binary Search Tree independent exercise tests
+test('Max value is 105', () => {
+  expect(bst.getMaxValue()).toBe(105)
+})
+
+test('Min value is 10', () => {
+  expect(bst.getMinValue()).toBe(10)
+})
+
 /*
 Test Results:
   √ left left node value equals 20
@@ -83,7 +92,8 @@ Test Results:
   √ depthFirst 'in-order' equals 10,20,30,35,45,50,59,60,70,85,100,105
   √ depthFirst 'post-order' equals 10,20,35,45,30,59,60,85,105,100,70,50
   √ breadthFirst equals 50,30,70,20,45,60,100,10,35,59,85,105
-
+  √ breadthFirst Max value is 105
+  √ breadthFirst Min value is 10
   Test Suites: 1 passed, 1 total
-  Tests:       10 passed, 10 total
+  Tests:       12 passed, 10 total
 */

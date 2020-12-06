@@ -81,6 +81,20 @@ class BST {
       if (right) queue.push(right)
     }
   }
+
+  getMinValue () {
+    let node = this
+
+    while (node.left !== null) node = node.left
+    return node.value
+  }
+
+  getMaxValue () {
+    let node = this
+
+    while (node.right !== null) node = node.right
+    return node.value
+  }
 }
 
 module.exports = BST
