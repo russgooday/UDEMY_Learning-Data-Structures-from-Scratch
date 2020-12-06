@@ -70,3 +70,20 @@ bst.breadthFirstTraversal(value => BFTRes.push(value))
 test(`breadthFirst equals ${BFTExp}`, () => {
   expect(BFTRes).toEqual(BFTExp)
 })
+
+/*
+Test Results:
+  √ left left node value equals 20
+  √ left right node value equals 45
+  √ right right node value equals 100
+  √ contains value 59 equals true
+  √ contains value 33 equals false
+  √ contains value 35 equals true
+  √ depthFirst 'pre-order' equals 50,30,20,10,45,35,70,60,59,100,85,105
+  √ depthFirst 'in-order' equals 10,20,30,35,45,50,59,60,70,85,100,105
+  √ depthFirst 'post-order' equals 10,20,35,45,30,59,60,85,105,100,70,50
+  √ breadthFirst equals 50,30,70,20,45,60,100,10,35,59,85,105
+
+  Test Suites: 1 passed, 1 total
+  Tests:       10 passed, 10 total
+*/
