@@ -1,49 +1,46 @@
 // Refactored tutor's script to use classes
 
+// Curried traversal methods
+
+const containsWith = (needle) =>
+  function traverse ({ value, left, right }) {
+
+    if (needle === value) return true
+    const node = (needle <= value) ? left : right
+    return (node === null) ? false : traverse(node)
+  }
+
+const preOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    iteratorFn(value)
+    if (left) traverse(left)
+    if (right) traverse(right)
+  }
+
+const inOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    if (left) traverse(left)
+    iteratorFn(value)
+    if (right) traverse(right)
+  }
+
+
+const postOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    if (left) traverse(left)
+    if (right) traverse(right)
+    iteratorFn(value)
+  }
+
 class BST {
 
   constructor (value) {
     this.value = value
     this.left = null
     this.right = null
-  }
-
-  // Curried traversal methods
-
-  containsWith (needle) {
-    return function traverse ({ value, left, right }) {
-
-      if (needle === value) return true
-      const node = (needle <= value) ? left : right
-      return (node === null) ? false : traverse(node)
-    }
-  }
-
-  preOrderWith (iteratorFn) {
-    return function traverse ({ value, left, right }) {
-
-      iteratorFn(value)
-      if (left) traverse(left)
-      if (right) traverse(right)
-    }
-  }
-
-  inOrderWith (iteratorFn) {
-    return function traverse ({ value, left, right }) {
-
-      if (left) traverse(left)
-      iteratorFn(value)
-      if (right) traverse(right)
-    }
-  }
-
-  postOrderWith (iteratorFn) {
-    return function traverse ({ value, left, right }) {
-
-      if (left) traverse(left)
-      if (right) traverse(right)
-      iteratorFn(value)
-    }
   }
 
   // User methods
@@ -56,18 +53,18 @@ class BST {
   }
 
   contains (value) {
-    return this.containsWith(value)(this)
+    return containsWith(value)(this)
   }
 
   depthFirstTraversal (iteratorFn, order = 'in-order') {
 
-    const methods = {
-      'pre-order': this.preOrderWith,
-      'in-order': this.inOrderWith,
-      'post-order': this.postOrderWith
-    }
+    const orderFn = {
+      'pre-order': preOrderWith,
+      'in-order': inOrderWith,
+      'post-order': postOrderWith
+    }[order]
 
-    if (methods[order]) methods[order](iteratorFn)(this)
+    if (orderFn) orderFn(iteratorFn)(this)
   }
 
   breadthFirstTraversal (iteratorFn) {
