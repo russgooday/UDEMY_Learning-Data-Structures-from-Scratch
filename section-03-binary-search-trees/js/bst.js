@@ -1,5 +1,3 @@
-// Refactored tutor's script to use classes
-
 // Curried traversal methods
 
 const containsWith = (needle) =>
@@ -46,7 +44,7 @@ class BST {
   // User methods
 
   insert (value) {
-    let node = (value <= this.value) ? 'left' : 'right'
+    const node = (value <= this.value) ? 'left' : 'right'
 
     if (this[node] === null) this[node] = new BST(value)
     else this[node].insert(value)
@@ -71,7 +69,7 @@ class BST {
     const queue = [this]
 
     while (queue.length) {
-      const {value, left, right} = queue.shift()
+      const { value, left, right } = queue.shift()
 
       iteratorFn(value)
       if (left) queue.push(left)
