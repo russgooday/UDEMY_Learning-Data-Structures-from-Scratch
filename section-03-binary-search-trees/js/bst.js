@@ -1,38 +1,3 @@
-// Curried traversal methods
-
-const containsWith = (needle) =>
-  function traverse ({ value, left, right }) {
-
-    if (needle === value) return true
-    const node = (needle <= value) ? left : right
-    return (node === null) ? false : traverse(node)
-  }
-
-const preOrderWith = (iteratorFn) =>
-  function traverse ({ value, left, right }) {
-
-    iteratorFn(value)
-    if (left) traverse(left)
-    if (right) traverse(right)
-  }
-
-const inOrderWith = (iteratorFn) =>
-  function traverse ({ value, left, right }) {
-
-    if (left) traverse(left)
-    iteratorFn(value)
-    if (right) traverse(right)
-  }
-
-
-const postOrderWith = (iteratorFn) =>
-  function traverse ({ value, left, right }) {
-
-    if (left) traverse(left)
-    if (right) traverse(right)
-    iteratorFn(value)
-  }
-
 class BST {
 
   constructor (value) {
@@ -91,5 +56,40 @@ class BST {
     return node.value
   }
 }
+
+// Curried traversal private methods
+
+const containsWith = (needle) =>
+  function traverse ({ value, left, right }) {
+
+    if (needle === value) return true
+    const node = (needle <= value) ? left : right
+    return (node === null) ? false : traverse(node)
+  }
+
+const preOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    iteratorFn(value)
+    if (left) traverse(left)
+    if (right) traverse(right)
+  }
+
+const inOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    if (left) traverse(left)
+    iteratorFn(value)
+    if (right) traverse(right)
+  }
+
+
+const postOrderWith = (iteratorFn) =>
+  function traverse ({ value, left, right }) {
+
+    if (left) traverse(left)
+    if (right) traverse(right)
+    iteratorFn(value)
+  }
 
 module.exports = BST
