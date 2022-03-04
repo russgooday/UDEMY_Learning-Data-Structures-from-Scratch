@@ -17,7 +17,9 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:bst": "jest --testPathPattern=section-03-binary-search-trees/bst",
+    "test:hash-table": "jest --testPathPattern=section-04-hash-tables/hash-table"
   },
   "standard": {
     "globals": [

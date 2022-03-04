@@ -1,11 +1,15 @@
 {
-  "rules": {
-    "padded-blocks": 0,
-    "no-multiple-empty-lines": 0,
-    "no-trailing-spaces": 0,
-    "no-new": 0
-  },
-  "globals": {
-    "fetch": true
-  }
+    "rules": {
+        "padded-blocks": 0,
+        "no-multiple-empty-lines": 0,
+        "no-trailing-spaces": 0,
+        "no-new": 0,
+        "no-return-assign": 0,
+        "indent": ["error", 4]
+    },
+    "globals": {
+        "test": true,
+        "expect": true,
+        "describe": true
+    }
 }

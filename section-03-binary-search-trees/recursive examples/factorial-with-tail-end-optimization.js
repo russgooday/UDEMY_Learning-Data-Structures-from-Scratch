@@ -3,11 +3,11 @@
 // tail-end optimization
 
 const factorial = (n, result = 1) => {
-  console.log(`n=${n}, result=${result}`)
+    console.log(`n=${n}, result=${result}`)
 
-  return (n === 1)
-    ? result
-    : factorial(n - 1, n * result)
+    return (n === 1)
+        ? result
+        : factorial(n - 1, n * result)
 }
 
 factorial(5)
